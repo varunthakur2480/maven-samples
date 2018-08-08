@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f7a79d22-458b-47a3-b35a-9d109e7e0e34" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>TestDotNetCore</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_2" name="" type="dotnet.cli">
+        <parameters>
+          <param name="command" value="build" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="paths" value="dotnetcore-sample.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="TestMavenProject_Test_2" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
