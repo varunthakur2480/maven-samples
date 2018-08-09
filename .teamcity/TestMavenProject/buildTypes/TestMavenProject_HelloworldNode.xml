@@ -5,14 +5,15 @@
   <settings>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_1" name="" type="Maven2">
+      <runner id="RUNNER_1" name="" type="DockerCommand">
         <parameters>
-          <param name="goals" value="clean test" />
-          <param name="maven.path" value="%teamcity.tool.maven3%" />
-          <param name="pomLocation" value="pom.xml" />
-          <param name="runnerArgs" value="-Dmaven.test.failure.ignore=true" />
+          <param name="command.args" value="--pull" />
+          <param name="docker.command.type" value="build" />
+          <param name="docker.image.namesAndTags" value="test/helloworld-node:latest" />
+          <param name="docker.push.remove.image" value="true" />
+          <param name="dockerfile.path" value="Dockerfile" />
+          <param name="dockerfile.source" value="PATH" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="userSettingsSelection" value="userSettingsSelection:default" />
         </parameters>
       </runner>
     </build-runners>
