@@ -16,9 +16,7 @@
         </parameters>
       </runner>
     </build-runners>
-    <vcs-settings>
-      <vcs-entry-ref root-id="TestMavenProject_Test" />
-    </vcs-settings>
+    <vcs-settings />
     <requirements />
     <build-triggers />
     <cleanup />
