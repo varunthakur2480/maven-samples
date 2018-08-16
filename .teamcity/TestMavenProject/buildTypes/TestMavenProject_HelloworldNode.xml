@@ -25,13 +25,6 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_4" name="docker autthenticate" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="gcloud auth configure-docker" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="TestMavenProject_NodeMicroservice" />
